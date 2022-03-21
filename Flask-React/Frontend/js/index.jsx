@@ -6,5 +6,3 @@ import '../css/index.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-
-// alert('hello world');
