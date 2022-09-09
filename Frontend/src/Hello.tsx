@@ -1,27 +1,24 @@
 import React from "react";
 
-const API_URL = "http:localhost:5000/api";
+const API_URL = "http://127.0.0.1:5000";
 function Hello() {
   const [greetings, setGreetings] = React.useState({
     language: "English",
     greeting: "Hello",
   });
-  const getPythonHello = () => {
-    fetch(`${API_URL}/api/hello`)
+  const getHello = () => {
+    fetch(`${API_URL}/api/hello/`)
       .then((res) => res.json())
       .then((res) => setGreetings(res[Math.floor(Math.random() * res.length)]))
       .catch((err) => console.error(err));
   };
 
   return (
-    <div>
-      <h1>
+    <div className="flex flex-col my-0 mx-auto enter align-center w-96 mt-48">
+      <h1 className="text-4xl text-center">
         {greetings.language} : {greetings.greeting}
       </h1>
-      <hr />
-      <br />
-
-      <button onClick={getPythonHello}>
+      <button onClick={getHello} className=" bg-emerald-700  p-4 ">
         Click to say hello in different Languages.
       </button>
     </div>

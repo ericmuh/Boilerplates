@@ -4,9 +4,8 @@ import "../assets/css/index.css";
 
 function App() {
   return (
-    <div className="header-contents">
+    
       <Hello />
-    </div>
   );
 }
 
