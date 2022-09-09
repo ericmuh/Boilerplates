@@ -1,0 +1,16 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "a simple express api",
+  "main": "server.ts",
+  "repository": "github.com/ericmuh/Boilerplates",
+  "author": "Eric Muh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "serve": "nodemon app.ts"
+  }
+}
