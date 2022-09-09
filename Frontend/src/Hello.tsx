@@ -1,7 +1,6 @@
 import React from "react";
 
-const API_URL = "localhost:5000/api";
-// Function implementation.
+const API_URL = "http:localhost:5000/api";
 function Hello() {
   const [greetings, setGreetings] = React.useState({
     language: "English",
