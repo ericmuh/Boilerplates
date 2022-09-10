@@ -1,6 +1,6 @@
 import React from "react";
 
-const API_URL = "http://127.0.0.1:5000";
+export const API_URL = "http://127.0.0.1:5000";
 function Hello() {
   const [greetings, setGreetings] = React.useState({
     language: "English",
@@ -18,7 +18,7 @@ function Hello() {
       <h1 className="text-4xl text-center">
         {greetings.language} : {greetings.greeting}
       </h1>
-      <button onClick={getHello} className=" bg-emerald-700  p-4 ">
+      <button onClick={getHello} className="bg-emerald-700  p-4 ">
         Click to say hello in different Languages.
       </button>
     </div>
