@@ -7,10 +7,6 @@ function App() {
   return (
     <>
       <Hello />
-      <h1 className="text-lg">
-        {" "}
-        If your language is not availble input it below
-      </h1>
       <Form />
     </>
   );
