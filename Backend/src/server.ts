@@ -20,10 +20,15 @@ const port = process.env.PORT;
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.get("/api/hello", (req: Request, res: Response) => {
-  res.json(languages);
+app.get("/api/hello", (req, res) => {
+  return res.json(languages);
 });
-
+app.post("/api/send", (req, res) => {
+  languages.push(req.body);
+  const language = { language: req.body.language, greeting: req.body.greeting };
+  console.log(language);
+  return res.json("Language added");
+});
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
 });
