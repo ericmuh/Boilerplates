@@ -8,7 +8,7 @@ function Form() {
     e.preventDefault();
     fetch(`${API_URL}/api/send`, {
       method: "POST", // or 'PUT'
-      body: JSON.stringify({ language: language, greeting: greeting }),
+      body: JSON.stringify({ language, greeting }),
       headers: {
         "Content-Type": "application/json",
       },
