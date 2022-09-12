@@ -23,13 +23,14 @@ const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.urlencoded({ extended: false }));
+app.use(body_parser_1.default.json());
 app.get("/api/hello", (req, res) => {
     return res.json(languages);
 });
-app.post("/api/send", (req, res) => {
+app.post("/api/send/", (req, res) => {
     languages.push(req.body);
-    const language = { language: req.body.language, greeting: req.body.greeting };
-    console.log(language);
+    // const language = { language: req.body.language, greeting: req.body.greeting };
+    console.log(req.body);
     return res.json("Language added");
 });
 app.listen(port, () => {

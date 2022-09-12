@@ -18,15 +18,16 @@ const languages = [
 const app: Express = express();
 const port = process.env.PORT;
 app.use(cors());
-
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.get("/api/hello", (req, res) => {
   return res.json(languages);
 });
-app.post("/api/send", (req, res) => {
+app.post("/api/send/", (req, res) => {
   languages.push(req.body);
-  const language = { language: req.body.language, greeting: req.body.greeting };
-  console.log(language);
+  // const language = { language: req.body.language, greeting: req.body.greeting };
+  console.log(req.body);
   return res.json("Language added");
 });
 app.listen(port, () => {
