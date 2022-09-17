@@ -1,46 +1,33 @@
-# Flask with React Frontend
+# Express with React Frontend
+
 simple application with React front end and Flask Backend
 
-
 ## Requirements
-* Python3.x
-* pip3
-* Nodejs-16.x 
 
+- Nodejs-16.x
+- yarn or npm
 
+## Runining the Application.
 
-## Installation
+Open two terminal instances
+
+### in first terminal
+
 ```bash
-pip install -r requirements.txt
-npm install
+  cd Frontend && yarn install && yarn dev
 
 ```
 
-##usage
-Run two terminals 
-one running npm/yarn and the other for the pytho flask
+### in Second Terminal
 
-***using yarn
 ```bash
-cd Frontend
-yarn dev 
-```
-***using npm
-```bash
-npm run dev
-```
-
-The other running flask
-```bash
-cd Backend
-python server.py
+  cd Backend && yarn install && yarn dev
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-
-
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
 
+[MIT](https://choosealicense.com/licenses/mit/)
