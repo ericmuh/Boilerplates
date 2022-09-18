@@ -1,0 +1,10 @@
+.container h1{
+    font-size: 120px; 
+    font-weight: 300;
+}
+body{
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
