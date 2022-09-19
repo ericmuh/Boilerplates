@@ -1,28 +1,18 @@
-# Express with React Frontend
 
-simple application with React front end and Flask Backend
+
+# simple application with React frontend and Flask, express Backends
 
 ## Requirements
+
 
 - Nodejs-16.x
 - yarn or npm
 
 ## Runining the Application.
 
-Open two terminal instances
 
-### in first terminal
 
-```bash
-  cd Frontend && yarn install && yarn dev
 
-```
-
-### in Second Terminal
-
-```bash
-  cd Backend && yarn install && yarn dev
-```
 
 ## Contributing
 
@@ -30,4 +20,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 
+
 [MIT](https://choosealicense.com/licenses/mit/)
+=======
+
+
