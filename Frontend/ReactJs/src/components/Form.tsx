@@ -1,5 +1,5 @@
 import React from "react";
-import { API_URL } from "./Hello";
+import { API_URL } from "../variables";
 
 function Form() {
   const [language, setLanguage] = React.useState("");
