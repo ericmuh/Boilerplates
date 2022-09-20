@@ -6,7 +6,7 @@ function Form() {
   const [greeting, setGreeting] = React.useState("");
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    fetch(`${API_URL}/api/send`, {
+    fetch(`${API_URL}/api/send/`, {
       method: "POST", // or 'PUT'
       body: JSON.stringify({ language, greeting }),
       headers: {

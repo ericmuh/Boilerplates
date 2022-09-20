@@ -7,7 +7,7 @@ function Hello() {
     greeting: "Hello",
   });
   const getHello = () => {
-    fetch(`${API_URL}/api/hello/`)
+    fetch(`${API_URL}/api/hello`)
       .then((res) => res.json())
       .then((res) => setGreetings(res[Math.floor(Math.random() * res.length)]))
       .catch((err) => console.error(err));
