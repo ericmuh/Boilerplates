@@ -18,12 +18,12 @@ languages = [
 ]
 @app.route("/api/hello")
 def hello():
-    return jsonify(languages)
+    return jsonify(languages), 200
 
 
 @app.route("/api/send/", methods=["POST", "GET"])
 @cross_origin()
 def send():
     languages.append(request.get_json())
-    return "Language Successfully added", 200
+    return "Language Successfully added", 201
     
