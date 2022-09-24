@@ -1,16 +1,21 @@
 import React from "react";
+import { useQuery, useQueryClient } from "react-query";
+import { getLanguages } from "../api";
 import { API_URL } from "../variables";
 
 function Hello() {
+ // Access the client
+   const queryClient = useQueryClient()
+ 
+   // Queries
+   const query = useQuery('languages', getLanguages)
+
   const [greetings, setGreetings] = React.useState({
     language: "English",
     greeting: "Hello",
   });
   const getHello = () => {
-    fetch(`${API_URL}/api/hello`)
-      .then((res) => res.json())
-      .then((res) => setGreetings(res[Math.floor(Math.random() * res.length)]))
-      .catch((err) => console.error(err));
+     setGreetings(query.data[Math.floor(Math.random() * query.data.length)])
   };
 
   return (
