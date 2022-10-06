@@ -1,20 +1,21 @@
 import React from "react";
+import { useMutation } from "react-query";
+import { addLanguage } from "../api";
 import { API_URL } from "../variables";
 
 function Form() {
   const [language, setLanguage] = React.useState("");
   const [greeting, setGreeting] = React.useState("");
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-   
-  };
+  const mutation = useMutation(addLanguage);
   return (
     <>
       <h1 className="text-lg text-center">
         If your language is not availble input it below
       </h1>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={() => {
+          mutation.mutate({ language, greeting });
+        }}
         className="flex flex-col my-0 mx-auto  align-center w-96  mt-5">
         <input
           onChange={(e) => setLanguage(e.target.value)}

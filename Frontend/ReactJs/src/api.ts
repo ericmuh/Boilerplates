@@ -1,5 +1,11 @@
 import { API_URL } from "./variables";
-export async function addLanguage(language: string, greeting: string) {
+export async function addLanguage({
+  language,
+  greeting,
+}: {
+  language: string;
+  greeting: string;
+}) {
   const response = await fetch(`${API_URL}/api/send/`, {
     method: "POST", // or 'PUT'
     body: JSON.stringify({ language, greeting }),
