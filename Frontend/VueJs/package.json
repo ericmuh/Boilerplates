@@ -1,5 +1,5 @@
 {
-  "name": "flask_react",
+  "name": "boilerplates",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,10 @@
     "fullstack",
     "template",
     "python",
+    "express",
     "react",
-    "npm",
-    "webpack"
+    "vue",
+    "vite"
   ],
   "author": "",
   "license": "ISC",
